@@ -15,6 +15,7 @@ import { HiMiniUserCircle } from "react-icons/hi2";
 import {useState } from 'react';
 // import { UseproductsContext } from './context/ProductsContext';
 import { usePathname } from 'next/navigation'
+import { UserButton} from '@clerk/nextjs';
 // import {
 //   Select,
 //   SelectContent,
@@ -111,7 +112,7 @@ const [isOpen, setIsOpen] = useState(false);
                 <Link href='/users'><li className={`${pathname == '/users' && 'bg-black text-white'} p-2 rounded-md cursor-pointer underline-offset-4 hover:underline font-bold`}>Users</li></Link>
             </ul>
             <div>
-                <HiMiniUserCircle className='text-3xl'/>
+                <UserButton />
             </div>
           </div>
         </nav>
